@@ -1,0 +1,15 @@
+@using CRUDelicious_Entity.Models;
+@model Dish
+@{
+    ViewData["Title"] = "View Dish";
+}
+<h1>View @Model.Name~</h1>
+<a href="/edit/@Model.DishId">Edit</a>
+<p>@Model.Name</p>
+<p>@Model.Chef</p>
+<p>@Model.Calories</p>
+<p>@Model.Tastiness</p>
+<p>@Model.Chef</p>
+<p>@Model.Description</p>
+<p>@Model.CreatedAt.ToString()</p>
+<p>@Model.UpdatedAt.ToString()</p>

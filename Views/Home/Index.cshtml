@@ -1,0 +1,31 @@
+@using CRUDelicious_Entity.Models;
+@model List<Dish>
+@{
+    ViewData["Title"] = "CRUDelicius";
+}
+<h1>Welcome to CRUDelicius~</h1>
+<a href="/new">ADD</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Chef</th>
+            <th scope="col">Calories</th>
+        </tr>
+    </thead>
+    <tbody>
+    @{
+        foreach (Dish dish in @Model)
+        {
+        <tr>
+            <td scope="col"><a href= "/@dish.DishId">@dish.Name</a></td>
+            <td scope="col">@dish.Chef</td>
+            <td scope="col">@dish.Calories</td>
+        </tr>
+        }
+    }
+    </tbody>
+</table>
+
+
+
